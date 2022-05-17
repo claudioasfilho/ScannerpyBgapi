@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Temperature Measurement NCP-host Example Application.
+Simple pyBGAPI Scanner App
 """
 
 # Copyright 2021 Silicon Laboratories Inc. www.silabs.com
@@ -33,16 +33,6 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "../.."))
 from common.conversion import Ieee11073Float
 from common.util import BluetoothApp, PeriodicTimer
 
-# Constants
-# Unit definitions for temperature measurement
-TEMPERATURE_UNIT_CELSIUS = b"\x00"
-TEMPERATURE_UNIT_FAHRENHEIT = b"\x01"
-# Temperature measurement characteristic indication period in seconds
-INDICATION_PERIOD = 1.0
-# Characteristic values
-GATTDB_DEVICE_NAME = b"Thermometer Example"
-GATTDB_MANUFACTURER_NAME_STRING = b"Silicon Labs"
-GATTDB_TEMPERATURE_TYPE = b"\x02" # Body
 
 class App(BluetoothApp):
     """ Application derived from generic BluetoothApp. """
